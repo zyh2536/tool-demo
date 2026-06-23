@@ -6,7 +6,7 @@ st.set_page_config(page_title="MedDRA Auto-coding", page_icon="💊")
 st.title("💊 MedDRA 智能编码助手")
 st.markdown("输入不良事件的原始词，系统将自动推荐最匹配的 **Top 20** LLT。")
 
-term = st.text_input("输入原始词 (例如: pain, rash, 骨折):")
+term = st.text_input(f"输入原始词 (例如: pain, rash, 骨折, {st.secrets.get("my_secret")}):")
 
 if st.button("Go"):
     if not term.strip():
