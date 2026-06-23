@@ -14,9 +14,6 @@ if st.button("Go"):
     else:
         # 显示加载动画（查询太快可能看不见，但体验很好）
         with st.spinner("正在字典中检索..."):
-            # 模糊匹配
-            mask = df_llt['llt_name'].str.contains(term, case=False, na=False)
-            matches = df_llt[mask]
             
             data = {
                 "llt_code": ["10037844", "10040911", "10046654", "10037884", "10047466"],
